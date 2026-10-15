@@ -1,12 +1,11 @@
 from __future__ import annotations
 
-def main():
-    class Node:
+class Node:
         def __init__(self,value,next:Node | None = None) -> None:
             self.value = value
             self.next_node = next
 
-    class Linked_list:
+class Linked_list:
         def __init__(self) -> None:
             self.head:Node | None = None
             self.size = 0
@@ -21,25 +20,26 @@ def main():
             popped_value = self.head.value
             self.head = self.head.next_node
             self.size -= 1
-            print(f"已经删除节点{popped_value},更新当前头节点为：{self.head.value}")
+            return popped_value
 
-        def show_len(self):
-            print(self.size)
+        def __len__(self):
+            return self.size
 
-        def show_whole_lkls(self):
-            print("现在开始打印该链表：\n")
-            while self.head.next_node is not None:
-                print(self.head.value)
+        def to_list(self):
+            result = []
+            temp = self.head
+            while temp is not None:
+                result.append(temp.value)
+                temp = temp.next_node
+            return result
 
-    linklist = Linked_list()
+def main():
+    """main程序仅作生成示例代码用"""
+    ll = Linked_list()
     for i in range(1,11):
-        linklist.add_new_node(i)
-        linklist.show_len()
-    linklist.show_whole_lkls()
-    for i in range(5):
-        linklist.pop_top_node()
-    linklist.show_len()
-    linklist.show_whole_lkls()
+         ll.add_new_node(i)
+    print(ll.to_list())
+
 
 if __name__ == "__main__":
     main()
