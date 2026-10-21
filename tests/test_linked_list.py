@@ -5,8 +5,8 @@ from app.main import Linked_list
 
 def test_new_list_is_empty():
     """新建的链表，长度应该是 0"""
-    ll = Linked_list()          # 准备
-    assert len(ll) == 0         # 断言
+    ll = Linked_list()  # 准备
+    assert len(ll) == 0  # 断言
 
 
 def test_add_node_increases_size():
@@ -56,9 +56,9 @@ def test_pop_until_empty():
 def test_order_after_mixed_operations():
     """混合操作后顺序仍然正确"""
     ll = Linked_list()
-    for i in range(1, 6):       # 1..5 依次头插 → [5, 4, 3, 2, 1]
+    for i in range(1, 6):  # 1..5 依次头插 → [5, 4, 3, 2, 1]
         ll.add_new_node(i)
-    ll.pop_top_node()           # 删掉 5 → [4, 3, 2, 1]
-    ll.add_new_node(9)          # 头插 9 → [9, 4, 3, 2, 1]
+    ll.pop_top_node()  # 删掉 5 → [4, 3, 2, 1]
+    ll.add_new_node(9)  # 头插 9 → [9, 4, 3, 2, 1]
     assert ll.to_list() == [9, 4, 3, 2, 1]
     assert len(ll) == 5
