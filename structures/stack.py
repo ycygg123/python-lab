@@ -1,4 +1,4 @@
-from app.main import Linked_list
+from structures.linked_list import Linked_list
 
 
 class Stack:
