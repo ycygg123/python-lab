@@ -1,6 +1,6 @@
 import pytest
 
-from app.stack import Stack
+from structures.stack import Stack
 
 
 def test_new_stack_is_zero():

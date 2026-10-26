@@ -1,6 +1,6 @@
 import pytest
 
-from app.main import Linked_list
+from structures.linked_list import Linked_list
 
 
 def test_new_list_is_empty():
