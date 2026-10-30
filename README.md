@@ -4,17 +4,17 @@
 
 ## 有什么
  
-/app(/main 或者 /stack) -- 跑程序(fast api后端、数据结构、算法等)
+app/ + strutures/  --fastapi、数据结构
 /tests  -- 测试用
 
 ## 如何跑
 ```bash:
 uv sync
-uv run pytest /tests
-uv run uvicorn app.api:app --reload
+uv run pytest tests
+uv run uvicorn app.main:app --reload
 ```
 
 ## 目前学习进度
 - [x] 10.15-19   用py重新手搓一下链表和栈    
 - [x] 10.23      开启fast api学习
-- []  10.24        
+- [ ]  10.30        
