@@ -51,4 +51,4 @@ def delete_note(note_id: int,session: Session = Depends(get_session)):
         raise HTTPException(status_code=404, detail="该笔记不存在！")
     session.delete(note)
     session.commit()
-    return 0
+    
