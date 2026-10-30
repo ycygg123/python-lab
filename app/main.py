@@ -44,7 +44,7 @@ def get_all_notes(note_id: int,session: Session = Depends(get_session)):
 def list_notes(session: Session = Depends(get_session)):
     return session.scalars(select(Note)).all()
 
-@app.delete("/notes", status_code=204)
+@app.delete("/notes/{note_id}", status_code=204)
 def delete_note(note_id: int,session: Session = Depends(get_session)):
     note = session.get(Note,note_id)
     if not note:
