@@ -10,10 +10,11 @@
 ## 如何跑
 ```bash:
 uv sync
-uv run pytest
-uv run python -m 
+uv run pytest /tests
+uv run uvicorn app.api:app --reload
 ```
 
 ## 目前学习进度
 - [x] 10.15-19   用py重新手搓一下链表和栈    
-- [ ] 10.20      开启fast api学习           
+- [x] 10.23      开启fast api学习
+- []  10.24        
